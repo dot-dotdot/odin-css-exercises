@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
 .icon {
@@ -33,6 +36,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  /* Even though the solution suggests that align-items for
+  header and close-button should be included, I had to disable 
+  these declarations because they actually make things vertically 
+  off-center. Without them the elements are vertically centered.
+  I have no idea why, and it's pissing me off. */
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .close-button {
@@ -44,10 +62,14 @@ body {
   height: 24px;
   width: 24px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 button {
